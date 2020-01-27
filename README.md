@@ -1,6 +1,6 @@
-# empty-project
+# career-app
 
-Empty project.
+Career app.
 
 ## Building and running on localhost
 
