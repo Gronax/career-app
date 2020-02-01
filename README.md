@@ -22,6 +22,12 @@ To create a production build:
 npm run build-prod
 ```
 
+To create a development build:
+
+```sh
+npm run build-dev
+```
+
 ## Running
 
 Open the file `dist/index.html` in your browser
@@ -29,4 +35,3 @@ Open the file `dist/index.html` in your browser
 ## Credits
 
 Made with [createapp.dev](https://createapp.dev/)
-
