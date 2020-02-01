@@ -1,12 +1,21 @@
+import React from 'react';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
-import React from "react";
-import { hot } from 'react-hot-loader/root';
+import NoMatch from './containers/NoMatch';
 
-class App extends React.Component {
-  render() {
-    const { name } = this.props;
-    return <h1>Hello {name}</h1>;
-  }
-}
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={NoMatch} />
+          <Route exact path="/joblist" component={NoMatch} />
+          <Route exact path="/jobdetail/:id" component={NoMatch} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
-export default hot(App);
+export default App;

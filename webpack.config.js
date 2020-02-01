@@ -5,11 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = {
   entry: [
     'react-hot-loader/patch',
-    './src/index.js'
+    './index.js'
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.[hash].js'
   },
   module: {
     rules: [
@@ -51,7 +51,9 @@ const config = {
     }
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
+    hot: true
   },
   plugins: [
     new HtmlWebpackPlugin({
